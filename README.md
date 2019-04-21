@@ -1,7 +1,6 @@
 # choose-no-of-person
-Project Title
-Choose number of people in AngularJS
-
+# Project Title
+Choose number of people
 # Prerequisites
 Visual Studio 2019 or earlier, .net framework 7.2 or less.
 AngularJS, bootstrap, font awesome
@@ -35,7 +34,7 @@ Tested manually
 # Authors
 Karthik U
 
-License
+# License
 This project is licensed under the MIT License - see the LICENSE.md file for details
 
 Acknowledgments
