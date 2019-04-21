@@ -1,0 +1,21 @@
+﻿@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css");
+.button {
+    background-color: #000b59; /* Blue */
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.buttonBlue {
+    border-radius: 50%;
+}
+.buttonRed {
+    background-color:#ff0000; 
+    border-radius: 50%;
+}

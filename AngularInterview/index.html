@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+</head>
+<script src="Scripts/angular.js"></script>
+<link href="css/styles.css" rel="stylesheet"/>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="Scripts/jquery-3.3.1.min.js"></script>
+<!--<script>
+    function AngularAssignment($scope) {
+        $scope.UserName = "Karthik";
+    }
+    var myApp = angular.module("myApp", []);
+    myApp.controller("AngularAssignment", AngularAssignment);
+</script>-->
+<script src="controllers/main.js"></script>
+<body class="jumbotron">
+    <div ng-app="myApp">
+        <div ng-controller="AngularAssignment">
+            <div class="container">
+                <div class="row">
+                    <h2 style="color:#000b59"><i class="fa fa-users"></i>&nbsp;Choose number of <b>people</b></h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col col-sm-6 col-md-6 col-lg-6">
+                        <i class="fa fa-bed" style="color:#000b59"></i>&nbsp;&nbsp;<label for="txt_roomcode" style="color:#000b59">ROOMS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <button style="padding: 10px;" class="button buttonBlue" ng-disabled="disableRoomDec" id="btn_roomcode" ng-click="roomDec()"><h6><i class="fa fa-minus"></i></h6></button>
+                        &nbsp;&nbsp;{{model.Room}}&nbsp;&nbsp;
+                        <button style="padding: 10px;" class="button buttonRed" ng-disabled="disableRoomInc" id="btn_roomcode1" ng-click="roomInc()"><h6><i class="fa fa-plus"></i></h6></button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col col-sm-6 col-md-6 col-lg-6">
+                        <i class="fa fa-user" style="color:#000b59"></i>&nbsp;&nbsp;<label for="txt_roomcode" style="color:#000b59">ADULTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <button style="padding: 10px;" class="button buttonBlue" ng-disabled="disableAdultDec" id="btn_adultcode" ng-click="adultDec()"><h6><i class="fa fa-minus"></i></h6></button>
+                        &nbsp;&nbsp;{{model.Adult}}&nbsp;&nbsp;
+                        <button style="padding: 10px;" class="button buttonRed" ng-disabled="disableAdultInc" id="btn_adultcode1" ng-click="adultInc()"><h6><i class="fa fa-plus"></i></h6></button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col col-sm-6 col-md-6 col-lg-6">
+                        <i class="fa fa-child" style="color:#000b59"></i>&nbsp;&nbsp;<label for="txt_roomcode" style="color:#000b59">CHILDREN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <button style="padding: 10px;" class="button buttonBlue" ng-disabled="disableChildDec" id="btn_childcode" ng-click="childDec()"><h6><i class="fa fa-minus"></i></h6></button>
+                        &nbsp;&nbsp;{{model.Child}}&nbsp;&nbsp;
+                        <button style="padding: 10px;" class="button buttonRed" ng-disabled="disableChildInc" id="btn_childcode1" ng-click="childInc()"><h6><i class="fa fa-plus"></i></h6></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
