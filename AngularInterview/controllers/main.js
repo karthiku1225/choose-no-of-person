@@ -86,7 +86,7 @@ function AngularAssignment($scope) {
     $scope.roomInc = function () {
         $scope.disableRoomDec = false;
         $scope.model.Room = $scope.model.Room + 1;
-        if (($scope.model.Room > 1 && ($scope.model.Adult+1 == $scope.model.Room))) {
+        if (($scope.model.Room > 1 && ($scope.adultChildSum == $scope.model.Room-1))) {
             $scope.model.Adult++;
         }
         if ($scope.model.Room == 5) {
