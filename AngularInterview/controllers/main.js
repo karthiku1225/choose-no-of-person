@@ -1,7 +1,6 @@
 ﻿var myApp = angular.module("myApp", []);
 myApp.controller("AngularAssignment", ["$scope", AngularAssignment]);
 function AngularAssignment($scope) {
-    debugger
     $scope.model = { Room: 1, Adult: 1, Child: 0 };
     $scope.adultChildSum = $scope.model.Adult + $scope.model.Child;
     $scope.roomDec = function () {
@@ -84,6 +83,7 @@ function AngularAssignment($scope) {
         }
     }
     $scope.roomInc = function () {
+       if($scope.model.Room < 5){
         $scope.disableRoomDec = false;
         $scope.model.Room = $scope.model.Room + 1;
         if (($scope.model.Room > 1 && ($scope.adultChildSum == $scope.model.Room-1))) {
@@ -101,6 +101,9 @@ function AngularAssignment($scope) {
         else {
             $scope.disableChildDec = false;
         }
+       }else{
+             $scope.disableRoomInc;
+            }
     }
     $scope.adultDec = function () {
         $scope.disableRoomInc = false;
@@ -110,7 +113,6 @@ function AngularAssignment($scope) {
             //    $scope.model.Adult = $scope.model.Adult - 1;
             //}
         }
-        debugger
         if ($scope.model.Room == 1) {
             $scope.adultChildSum = $scope.model.Adult + $scope.model.Child;
             // }
@@ -130,7 +132,7 @@ function AngularAssignment($scope) {
                 $scope.model.Adult = $scope.model.Adult - 1;
                 $scope.model.Room--;
             }
-            else if ($scope.model.Child > 2 && $scope.adultChildSum <=5) {
+            else if ($scope.model.Child > 2 && $scope.adultChildSum <=2) {
                 $scope.model.Adult = $scope.model.Adult - 1;
                 $scope.model.Room--;
             }
@@ -146,7 +148,7 @@ function AngularAssignment($scope) {
                 $scope.model.Adult = $scope.model.Adult - 1;
                 $scope.model.Room--;
             }
-            else if ($scope.model.Child >= 1 && $scope.adultChildSum <=5) {
+            else if ($scope.model.Child >= 1 && $scope.adultChildSum <=3) {
                 $scope.model.Adult = $scope.model.Adult - 1;
                 $scope.model.Room--;
             }
@@ -162,7 +164,7 @@ function AngularAssignment($scope) {
                 $scope.model.Adult = $scope.model.Adult - 1;
                 $scope.model.Room--;
             }
-            else if ($scope.model.Child >= 1 && $scope.adultChildSum <=5) {
+            else if ($scope.model.Child >= 1 && $scope.adultChildSum <=4) {
                 $scope.model.Adult = $scope.model.Adult - 1;
                 $scope.model.Room--;
             }
@@ -172,7 +174,7 @@ function AngularAssignment($scope) {
             $scope.adultChildSum = $scope.model.Adult + $scope.model.Child;
         }
         else if ($scope.model.Room == 5) {
-            $scope.disableRoomInc = true;
+            $scope.disableRoomInc = false;
             $scope.adultChildSum = $scope.model.Adult + $scope.model.Child;
             if ($scope.model.Adult == 5 && $scope.adultChildSum == 5) {
                 $scope.model.Adult = $scope.model.Adult - 1;
@@ -259,7 +261,7 @@ function AngularAssignment($scope) {
                 $scope.model.Child = $scope.model.Child - 1;
                 $scope.model.Room--;
             }
-            else if ($scope.model.Adult >= 1 && $scope.adultChildSum <= 5) {
+            else if ($scope.model.Adult >= 1 && $scope.adultChildSum <= 2) {
                 $scope.model.Child = $scope.model.Child - 1;
                 $scope.model.Room--;
             }
@@ -291,7 +293,7 @@ function AngularAssignment($scope) {
                 $scope.model.Child = $scope.model.Child - 1;
                 $scope.model.Room--;
             }
-            else if ($scope.model.Adult >= 1 && $scope.adultChildSum <= 5) {
+            else if ($scope.model.Adult >= 1 && $scope.adultChildSum <= 4) {
                 $scope.model.Child = $scope.model.Child - 1;
                 $scope.model.Room--;
             }
@@ -301,7 +303,7 @@ function AngularAssignment($scope) {
             $scope.adultChildSum = $scope.model.Adult + $scope.model.Child;
         }
         else if ($scope.model.Room == 5) {
-            $scope.disableRoomInc = true;
+            $scope.disableRoomInc = false;
             $scope.adultChildSum = $scope.model.Adult + $scope.model.Child;
             if ($scope.model.Child == 5 && $scope.adultChildSum == 5) {
                 $scope.model.Child = $scope.model.Child - 1;
